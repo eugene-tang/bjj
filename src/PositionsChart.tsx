@@ -1,6 +1,16 @@
+interface Technique {
+  techniqueName: string;
+  grade?: string;
+}
+
+export interface Position {
+  positionName: string;
+  technique: Technique[];
+}
+
 interface PositionsChartProps {
-  positions: string[];
+  positions: Position[];
 };
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
-  <>{positions.map(position => <li key={position}>{position}</li>)}</>;
+  <>{positions.map(position => <li key={position.positionName}>{position.positionName}</li>)}</>;
