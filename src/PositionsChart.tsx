@@ -1,3 +1,5 @@
+import './PositionsChart.css';
+
 interface Technique {
   techniqueName: string;
   grade?: string;
@@ -14,7 +16,7 @@ interface PositionsChartProps {
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
   <ul>
-    {positions.map(position => <li key={position.positionName}>
+    {positions.map(position => <li className="position" key={position.positionName}>
       {position.positionName}
       <br></br>
       <ul>
