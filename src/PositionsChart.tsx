@@ -5,7 +5,7 @@ interface Technique {
 
 export interface Position {
   positionName: string;
-  technique: Technique[];
+  techniques: Technique[];
 }
 
 interface PositionsChartProps {
@@ -13,4 +13,12 @@ interface PositionsChartProps {
 };
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
-  <>{positions.map(position => <li key={position.positionName}>{position.positionName}</li>)}</>;
+  <ul>
+    {positions.map(position => <li key={position.positionName}>
+      {position.positionName}
+      <br></br>
+      <ul>
+        {position.techniques.map(technique => <li key={technique.techniqueName}>{technique.techniqueName}</li>)}
+      </ul>
+    </li>)}
+  </ul>;

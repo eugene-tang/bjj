@@ -1,32 +1,19 @@
 import { render, screen } from '@testing-library/react';
-import { PositionsChart } from './PositionsChart';
+import { PositionsChart, Position } from './PositionsChart';
 
 describe('PositionsChart', () => {
   it('displays all BJJ positions given to it', () => {
-    // const positions: string[] = [
-    //   'Take-down Techniques',
-    //   'Mount',
-    //   'Back Control',
-    //   'Positional Control',
-    //   'Escapes',
-    //   'Side Control',
-    //   'Closed Guard',
-    //   'Open Guard',
-    //   'Guard Passing',
-    //   'Half Guard',
-    // ];
-
-    const positions = [
-      { positionName: 'Take-down Techniques', technique: [] },
-      { positionName: 'Mount', technique: [] },
-      { positionName: 'Back Control', technique: [] },
-      { positionName: 'Positional Control', technique: [] },
-      { positionName: 'Escapes', technique: [] },
-      { positionName: 'Side Control', technique: [] },
-      { positionName: 'Closed Guard', technique: [] },
-      { positionName: 'Open Guard', technique: [] },
-      { positionName: 'Guard Passing', technique: [] },
-      { positionName: 'Half Guard', technique: [] },
+    const positions: Position[] = [
+      { positionName: 'Take-down Techniques', techniques: [] },
+      { positionName: 'Mount', techniques: [] },
+      { positionName: 'Back Control', techniques: [] },
+      { positionName: 'Positional Control', techniques: [] },
+      { positionName: 'Escapes', techniques: [] },
+      { positionName: 'Side Control', techniques: [] },
+      { positionName: 'Closed Guard', techniques: [] },
+      { positionName: 'Open Guard', techniques: [] },
+      { positionName: 'Guard Passing', techniques: [] },
+      { positionName: 'Half Guard', techniques: [] },
     ];
 
     render(<PositionsChart positions={positions} />);
@@ -41,5 +28,30 @@ describe('PositionsChart', () => {
     expect(screen.getByText(/Open Guard/i)).toBeInTheDocument();
     expect(screen.getByText(/Guard Passing/i)).toBeInTheDocument();
     expect(screen.getByText(/Half Guard/i)).toBeInTheDocument();
+  });
+
+  it('displays all BJJ techniques under each position', () => {
+    const positionsWithTechniques: Position[] = [
+      {
+        positionName: 'Take-down Techniques',
+        techniques: [
+          { techniqueName: 'Ogoshi - Hip Throw' },
+          { techniqueName: 'Kosoto Gake - Outside Trip' },
+        ],
+      },
+      {
+        positionName: 'Mount',
+        techniques: [
+          { techniqueName: 'Americana - Keylock' },
+        ]
+      },
+      { positionName: 'Back Control', techniques: [] },
+    ];
+
+    render(<PositionsChart positions={positionsWithTechniques} />);
+
+    expect(screen.getByText(/Ogoshi - Hip Throw/i)).toBeInTheDocument();
+    expect(screen.getByText(/Kosoto Gake - Outside Trip/i)).toBeInTheDocument();
+    expect(screen.getByText(/Americana - Keylock/i)).toBeInTheDocument();
   });
 });

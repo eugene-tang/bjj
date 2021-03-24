@@ -1,17 +1,28 @@
-import './App.css';
 import { PositionsChart, Position } from './PositionsChart';
 
 const hardcodedPositions: Position[] = [
-  { positionName: 'Take-down Techniques', technique: [] },
-  { positionName: 'Mount', technique: [] },
-  { positionName: 'Back Control', technique: [] },
-  { positionName: 'Positional Control', technique: [] },
-  { positionName: 'Escapes', technique: [] },
-  { positionName: 'Side Control', technique: [] },
-  { positionName: 'Closed Guard', technique: [] },
-  { positionName: 'Open Guard', technique: [] },
-  { positionName: 'Guard Passing', technique: [] },
-  { positionName: 'Half Guard', technique: [] },
+  {
+    positionName: 'Take-down Techniques',
+    techniques: [
+      { techniqueName: 'Ogoshi - Hip Throw' },
+      { techniqueName: 'Kosoto Gake - Outside Trip' },
+    ],
+  },
+  {
+    positionName: 'Mount',
+    techniques: [
+      { techniqueName: 'Americana - Keylock' },
+    ]
+  },
+  { positionName: 'Back Control', techniques: [] },
+  { positionName: 'Back Control', techniques: [] },
+  { positionName: 'Positional Control', techniques: [] },
+  { positionName: 'Escapes', techniques: [] },
+  { positionName: 'Side Control', techniques: [] },
+  { positionName: 'Closed Guard', techniques: [] },
+  { positionName: 'Open Guard', techniques: [] },
+  { positionName: 'Guard Passing', techniques: [] },
+  { positionName: 'Half Guard', techniques: [] },
 ];
 
 function App() {
