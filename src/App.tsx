@@ -15,7 +15,6 @@ const hardcodedPositions: Position[] = [
     ]
   },
   { positionName: 'Back Control', techniques: [] },
-  { positionName: 'Back Control', techniques: [] },
   { positionName: 'Positional Control', techniques: [] },
   { positionName: 'Escapes', techniques: [] },
   { positionName: 'Side Control', techniques: [] },

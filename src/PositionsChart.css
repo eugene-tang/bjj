@@ -1,4 +1,17 @@
 .position {
+    list-style-type: none;
     border: 1px solid black;
     margin: 10px;
+}
+
+.positionName {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 3px;
+}
+
+.techniques {
+    list-style-type: none;
+    padding-left: 2px;
 }
