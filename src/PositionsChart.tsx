@@ -19,7 +19,7 @@ export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
     {positions.map(position => <li className="position" key={position.positionName}>
       <p className="positionName">{position.positionName}</p>
       <ul className="techniques">
-        {position.techniques.map(technique => <li key={technique.techniqueName}>{technique.techniqueName}</li>)}
+        {position.techniques.map(technique => <li className="technique" key={technique.techniqueName}>{technique.techniqueName}</li>)}
       </ul>
     </li>)}
   </ul>;

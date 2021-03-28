@@ -27,5 +27,13 @@
 
 .techniques {
     list-style-type: none;
-    padding-left: 2px;
+    padding-left: 0;
+}
+
+.techniques li:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+
+.technique {
+    padding: 2px;
 }
