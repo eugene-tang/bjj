@@ -1,10 +1,13 @@
 .positions {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 @media only screen and (max-width: 1010px) {
     [class="positions"] {
         flex-direction: column;
+        min-width: 350px;
     }
 }
 
@@ -12,6 +15,7 @@
     list-style-type: none;
     border: 1px solid black;
     margin: 10px;
+    min-width: 320px;
 }
 
 .positionName {

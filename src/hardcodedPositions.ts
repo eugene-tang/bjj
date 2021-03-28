@@ -45,9 +45,9 @@ export const hardcodedPositions: Position[] = [
       { techniqueName: 'Bow & Arrow Choke to Armlock' },
     ]
   },
-  // {
-  //   positionName: 'Positional Control', techniques: []
-  // },
+  {
+    positionName: 'Positional Control', techniques: []
+  },
   // { positionName: 'Escapes', techniques: [] },
   // { positionName: 'Side Control', techniques: [] },
   // { positionName: 'Closed Guard', techniques: [] },
