@@ -15,7 +15,7 @@ interface PositionsChartProps {
 };
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
-  <ul>
+  <ul className="positions">
     {positions.map(position => <li className="position" key={position.positionName}>
       <p className="positionName">{position.positionName}</p>
       <ul className="techniques">
