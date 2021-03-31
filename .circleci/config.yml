@@ -20,6 +20,7 @@ jobs:
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
       - checkout
       - node/install-packages:
+          cache-path: ~/bjj/node_modules
           override-ci-command: yarn
       - run: yarn test
 workflows:
