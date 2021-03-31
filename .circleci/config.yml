@@ -1,4 +1,7 @@
 version: 2.1
+machine:
+  node:
+    version: v12.19.0
 orbs:
   node: circleci/node@3.0.0
 jobs:
