@@ -25,11 +25,11 @@ interface PositionsChartProps {
   positions: Position[];
 };
 
-const Technique: React.FC<TechniqueProps> = ({techniqueProps}) => {
-  const [showLinks, setShowLinks]= React.useState(false);
+const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
+  const [showLinks, setShowLinks] = React.useState(false);
 
-  return <li className="technique">
-    <p onClick={() => setShowLinks(!showLinks)}>{techniqueProps.techniqueName}</p>
+  return <li className="technique" onClick={() => setShowLinks(!showLinks)}>
+    {techniqueProps.techniqueName}
     {showLinks && <ul>{techniqueProps.urls.map(url => <li key={url.videoId}>{url.title}</li>)}</ul>}
   </li>;
 }
@@ -40,7 +40,7 @@ export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
     <li className="position" key={position.positionName}>
       <p className="positionName">{position.positionName}</p>
       <ul className="techniques">
-        {position.techniques.map(technique => <Technique techniqueProps={technique} key={technique.techniqueName} />)}
+        {position.techniques.map(technique => <TechniqueItem techniqueProps={technique} key={technique.techniqueName} />)}
       </ul>
     </li>)}
   </ul>;
