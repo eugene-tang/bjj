@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { PositionsChart, Position } from '../components/PositionsChart';
 
 describe('PositionsChart', () => {
@@ -54,27 +53,5 @@ describe('PositionsChart', () => {
     expect(screen.getByText(/Ogoshi - Hip Throw/i)).toBeInTheDocument();
     expect(screen.getByText(/Kosoto Gake - Outside Trip/i)).toBeInTheDocument();
     expect(screen.getByText(/Americana - Keylock/i)).toBeInTheDocument();
-  });
-
-  it('displays all links under a technique when technique expanded', () => {
-    const positionsWithTechniques: Position[] = [
-      {
-        positionName: 'Take-down Techniques',
-        techniques: [
-          {
-            techniqueName: 'Ogoshi - Hip Throw',
-            urls: [
-              { title: 'Hip Throw Video 1', videoId: '9bZkp7q19f0' },
-              { title: 'Hip Throw Video 2', videoId: 'UOABajHkcsA' },
-            ]
-          },
-        ],
-      },
-    ];
-
-    render(<PositionsChart positions={positionsWithTechniques} />);
-
-    userEvent.click(screen.getByText(/Ogoshi - Hip Throw/i));
-    expect(screen.getByText(/Hip Throw Video 1/i)).toBeInTheDocument();
   });
 });

@@ -1,38 +1,15 @@
 import React from 'react';
 import './PositionsChart.css';
-
-interface YouTubeLink {
-  title: string;
-  videoId: string;
-}
-
-interface Technique {
-  techniqueName: string;
-  grade?: string;
-  urls: YouTubeLink[];
-}
+import {Technique, TechniqueItem} from './TechniqueItem';
 
 export interface Position {
   positionName: string;
   techniques: Technique[];
 }
 
-interface TechniqueProps {
-  techniqueProps: Technique;
-}
-
 interface PositionsChartProps {
   positions: Position[];
 };
-
-const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
-  const [showLinks, setShowLinks] = React.useState(false);
-
-  return <li className="technique" onClick={() => setShowLinks(!showLinks)}>
-    {techniqueProps.techniqueName}
-    {showLinks && <ul>{techniqueProps.urls.map(url => <li key={url.videoId}>{url.title}</li>)}</ul>}
-  </li>;
-}
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
   <ul className="positions">
