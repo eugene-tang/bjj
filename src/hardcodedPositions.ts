@@ -1,4 +1,4 @@
-import { Position } from './PositionsChart';
+import { Position } from './components/PositionsChart';
 
 export const hardcodedPositions: Position[] = [
   {

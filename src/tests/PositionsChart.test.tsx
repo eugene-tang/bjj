@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { PositionsChart, Position } from './PositionsChart';
+import { PositionsChart, Position } from '../components/PositionsChart';
 
 describe('PositionsChart', () => {
   it('displays all BJJ positions given to it', () => {

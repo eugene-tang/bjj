@@ -1,4 +1,4 @@
-import { PositionsChart } from './PositionsChart';
+import { PositionsChart } from './components/PositionsChart';
 import { hardcodedPositions } from './hardcodedPositions';
 
 function App() {
