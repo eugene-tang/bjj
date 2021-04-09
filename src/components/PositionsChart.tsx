@@ -1,6 +1,6 @@
 import React from 'react';
 import './PositionsChart.css';
-import {Technique, TechniqueItem} from './TechniqueItem';
+import { Technique, TechniqueItem } from './TechniqueItem';
 
 export interface Position {
   positionName: string;
