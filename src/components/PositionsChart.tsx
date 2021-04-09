@@ -7,7 +7,7 @@ export interface Position {
   techniques: Technique[];
 }
 
-interface PositionsChartProps {
+export interface PositionsChartProps {
   positions: Position[];
 };
 

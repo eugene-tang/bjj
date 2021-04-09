@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface YouTubeLink {
   title: string;
@@ -20,6 +21,12 @@ export const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
 
   return <li className="technique" onClick={() => setShowLinks(!showLinks)}>
     {techniqueProps.techniqueName}
-    {showLinks && <ul>{techniqueProps.urls.map(url => <li key={url.videoId}>{url.title}</li>)}</ul>}
+    {showLinks &&
+      <ul>
+        {techniqueProps.urls.map(url =>
+          <Link to={`video?v=${url.videoId}`} key={url.videoId}>
+            {url.title}
+          </Link>)}
+      </ul>}
   </li>;
 }

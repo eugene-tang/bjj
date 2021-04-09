@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Technique, TechniqueItem } from '../components/TechniqueItem';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 describe('TechniqueItem', () => {
   it('displays all links under a technique when technique expanded', () => {
@@ -12,7 +13,7 @@ describe('TechniqueItem', () => {
       ]
     }
 
-    render(<TechniqueItem techniqueProps={technique} />);
+    render(<Router><TechniqueItem techniqueProps={technique} /></Router>);
 
     userEvent.click(screen.getByText(/Ogoshi - Hip Throw/i));
     expect(screen.getByText(/Hip Throw Video 1/i)).toBeInTheDocument();
