@@ -25,7 +25,7 @@ export const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
       <ul>
         {techniqueProps.urls.map(url =>
           <Link to={`video?v=${url.videoId}`} key={url.videoId}>
-            {url.title}
+            <div>{url.title}</div>
           </Link>)}
       </ul>}
   </li>;

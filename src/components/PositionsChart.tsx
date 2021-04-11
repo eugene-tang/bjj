@@ -12,12 +12,16 @@ export interface PositionsChartProps {
 };
 
 export const PositionsChart: React.FC<PositionsChartProps> = ({positions}) =>
-  <ul className="positions">
-    {positions.map(position =>
-    <li className="position" key={position.positionName}>
-      <p className="positionName">{position.positionName}</p>
-      <ul className="techniques">
-        {position.techniques.map(technique => <TechniqueItem techniqueProps={technique} key={technique.techniqueName} />)}
-      </ul>
-    </li>)}
-  </ul>;
+  <>
+    <h1>Positions Chart</h1>
+    <ul className="positions">
+      {positions.map(position =>
+        <li className="position" key={position.positionName}>
+        <p className="positionName">{position.positionName}</p>
+        <ul className="techniques">
+          {position.techniques.map(technique =>
+            <TechniqueItem techniqueProps={technique} key={technique.techniqueName} />)}
+        </ul>
+      </li>)}
+    </ul>
+  </>;
