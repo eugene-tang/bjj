@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { Position } from '../components/PositionsChart';
-import App, { Routes } from '../App';
+import { Routes } from '../App';
 
 describe('Navigation', () => {
   const positions: Position[] = [
@@ -19,7 +19,11 @@ describe('Navigation', () => {
   ];
 
   it('navigates to the video page when link clicked', () => {
-    render(<App positions={positions} />);
+    render(
+      <MemoryRouter initialEntries={["/"]}>
+        <Routes positions={positions} />
+      </MemoryRouter>
+    );
 
     userEvent.click(screen.getByText(/Ogoshi - Hip Throw/i));
     userEvent.click(screen.getByText(/Hip Throw Video 1/i));

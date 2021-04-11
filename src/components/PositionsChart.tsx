@@ -1,4 +1,3 @@
-import React from 'react';
 import './PositionsChart.css';
 import { Technique, TechniqueItem } from './TechniqueItem';
 
