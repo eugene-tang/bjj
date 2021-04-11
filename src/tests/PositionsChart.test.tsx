@@ -16,7 +16,7 @@ describe('PositionsChart', () => {
       { positionName: 'Half Guard', techniques: [] },
     ];
 
-    render(<PositionsChart positions={positions} />);
+    render(<PositionsChart positions={positions} setSelectedVideo={() => {}} />);
 
     expect(screen.getByText(/Take-down Techniques/i)).toBeInTheDocument();
     expect(screen.getByText(/Mount/i)).toBeInTheDocument();
@@ -48,7 +48,7 @@ describe('PositionsChart', () => {
       { positionName: 'Back Control', techniques: [] },
     ];
 
-    render(<PositionsChart positions={positionsWithTechniques} />);
+    render(<PositionsChart positions={positionsWithTechniques} setSelectedVideo={() => {}} />);
 
     expect(screen.getByText(/Ogoshi - Hip Throw/i)).toBeInTheDocument();
     expect(screen.getByText(/Kosoto Gake - Outside Trip/i)).toBeInTheDocument();

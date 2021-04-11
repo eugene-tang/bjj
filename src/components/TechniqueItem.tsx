@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { Link } from 'react-router-dom';
 
-interface YouTubeLink {
+export interface YouTubeLink {
   title: string;
   videoId: string;
 }
@@ -14,9 +14,10 @@ export interface Technique {
 
 interface TechniqueProps {
   techniqueProps: Technique;
+  setSelectedVideo: Dispatch<YouTubeLink>;
 }
 
-export const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
+export const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps, setSelectedVideo}) => {
   const [showLinks, setShowLinks] = React.useState(false);
 
   return <li className="technique" onClick={() => setShowLinks(!showLinks)}>
@@ -24,7 +25,7 @@ export const TechniqueItem: React.FC<TechniqueProps> = ({techniqueProps}) => {
     {showLinks &&
       <ul>
         {techniqueProps.urls.map(url =>
-          <Link to={`video?v=${url.videoId}`} key={url.videoId}>
+          <Link to={`video?v=${url.videoId}`} key={url.videoId} onClick={() => setSelectedVideo(url)}>
             <div>{url.title}</div>
           </Link>)}
       </ul>}

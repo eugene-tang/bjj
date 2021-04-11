@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
+import { YouTubeLink } from './TechniqueItem';
 
-export const VideoPage = () => {
+interface VideoPageProps {
+  youTubeLink: YouTubeLink;
+}
+
+export const VideoPage: React.FC<VideoPageProps> = ({youTubeLink}) => {
     return <>
       <Link to="/">{`<-Back to Positions`}</Link>
-      <p>Hip Throw Video 1</p>
+      <p>{youTubeLink.title}</p>
     </>;
 };

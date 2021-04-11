@@ -26,9 +26,9 @@ describe('Navigation', () => {
     );
 
     userEvent.click(screen.getByText(/Ogoshi - Hip Throw/i));
-    userEvent.click(screen.getByText(/Hip Throw Video 1/i));
+    userEvent.click(screen.getByText(/Hip Throw Video 2/i));
 
-    expect(screen.getByText(/Hip Throw Video 1/i)).toBeInTheDocument();
+    expect(screen.getByText(/Hip Throw Video 2/i)).toBeInTheDocument();
     expect(screen.queryByText(/Ogoshi - Hip Throw/i)).not.toBeInTheDocument();
   });
 
