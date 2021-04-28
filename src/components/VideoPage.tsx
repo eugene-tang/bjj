@@ -11,7 +11,13 @@ export const VideoPage: React.FC<VideoPageProps> = ({youTubeLink}) => {
       <Link to="/">{`<-Back to Positions`}</Link>
       <div className="videoPage">
         <div className="videoContainer">
-          <div className="video"></div>
+          <iframe
+            title={youTubeLink.title}
+            className="video"
+            src={`https://www.youtube.com/embed/${youTubeLink.videoId}?autoplay=1`}
+            allow="autoplay"
+          >
+          </iframe>
           <h1>{youTubeLink.title}</h1>
         </div>
         <div className="videoSuggestionsContainer">

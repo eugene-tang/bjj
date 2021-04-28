@@ -7,8 +7,8 @@ export const hardcodedPositions: Position[] = [
       {
         techniqueName: 'Ogoshi - Hip Throw',
         urls: [
-          { title: 'Hip Throw Video 1', videoId: '9bZkp7q19f0' },
-          { title: 'Hip Throw Video 2', videoId: 'UOABajHkcsA' },
+          { title: 'Hip Throw O Goshi to Side Mount by Andre Galvao', videoId: 'sBQXNxRsVjw' },
+          { title: 'Jiu Jitsu Hip Throw (O-Goshi) - BJJ Blue Belt Requirements Technique #2', videoId: 'uEQpw6HSRDM' },
         ],
       },
       { techniqueName: 'Kosoto Gake - Outside Trip', urls: [] },
