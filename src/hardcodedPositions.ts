@@ -52,12 +52,95 @@ export const hardcodedPositions: Position[] = [
     ]
   },
   {
-    positionName: 'Positional Control', techniques: []
+    positionName: 'Positional Control and Escapes',
+    techniques: [
+      { techniqueName: 'Demonstrate Mount, Side Control & Back Control', urls: [] },
+      { techniqueName: 'Upa - Bridge and Roll Escape from Mount', urls: [] },
+      { techniqueName: 'Recover Guard from Side Control', urls: [] },
+      { techniqueName: 'Back Control Escape', urls: [] },
+      { techniqueName: 'Demonstrate holding Turtle Position', urls: [] },
+      { techniqueName: 'Turtle Turnover to Side Control Position', urls: [] },
+      { techniqueName: 'Turtle Sit Out', urls: [] },
+      { techniqueName: 'Turtle Side Roll', urls: [] },
+      { techniqueName: 'Elbow Knee Escape from Mount', urls: [] },
+      { techniqueName: 'Knee on Belly Escape', urls: [] },
+      { techniqueName: 'Side Control to Modified Kesa Gatame', urls: [] },
+      { techniqueName: 'Side Control to Mount to Back Control', urls: [] },
+      { techniqueName: 'Modified Kesa Gatame to Kesa Gatame', urls: [] },
+      { techniqueName: 'Turtle Position to Back Control', urls: [] },
+    ]
   },
-  // { positionName: 'Escapes', techniques: [], urls: [] },
-  // { positionName: 'Side Control', techniques: [], urls: [] },
-  // { positionName: 'Closed Guard', techniques: [], urls: [] },
-  // { positionName: 'Open Guard', techniques: [], urls: [] },
-  // { positionName: 'Guard Passing', techniques: [], urls: [] },
-  // { positionName: 'Half Guard', techniques: [], urls: [] },
+  {
+    positionName: 'Side Control',
+    techniques: [
+      { techniqueName: 'Americana - Keylock', urls: [] },
+      { techniqueName: 'Juji-Gatame - Armlock', urls: [] },
+      { techniqueName: 'Transition to Mount', urls: [] },
+      { techniqueName: 'Kimura', urls: [] },
+      { techniqueName: 'Straight Elbow Lock', urls: [] },
+      { techniqueName: 'Transition to Knee on Belly', urls: [] },
+      { techniqueName: 'Keylock to Straight Elbow Lock', urls: [] },
+      { techniqueName: 'Kimura to Armlock', urls: [] },
+      { techniqueName: 'Arm Triangle Choke', urls: [] },
+      { techniqueName: `D'Arce Choke`, urls: [] },
+    ]
+  },
+  {
+    positionName: 'Closed Guard',
+    techniques: [
+      { techniqueName: 'Breaking Posture', urls: [] },
+      { techniqueName: 'Cross Collar Choke', urls: [] },
+      { techniqueName: 'Juji-Gatame - Armlock', urls: [] },
+      { techniqueName: 'Scissor Sweep', urls: [] },
+      { techniqueName: 'Kimura', urls: [] },
+      { techniqueName: 'Guillotine Choke', urls: [] },
+      { techniqueName: 'Hip Bump Sweep', urls: [] },
+      { techniqueName: 'Triangle Choke', urls: [] },
+      { techniqueName: 'Cross Collar Choke to Armlock', urls: [] },
+      { techniqueName: 'Armlock to Triangle Choke', urls: [] },
+      { techniqueName: 'Scissor Sweep to Knee Push Sweep', urls: [] },
+      { techniqueName: 'Oma Plata', urls: [] },
+      { techniqueName: 'Flower Sweep', urls: [] },
+      { techniqueName: 'Arm-Drag to Back Control', urls: [] },
+    ]
+  },
+  {
+    positionName: 'Open Guard',
+    techniques: [
+      { techniqueName: 'Double Ankle Sweep', urls: [] },
+      { techniqueName: 'Triangle From Open Guard', urls: [] },
+      { techniqueName: 'Hook Sweep', urls: [] },
+      { techniqueName: 'Sickle Sweep', urls: [] },
+      { techniqueName: 'Open Guard Armlock', urls: [] },
+      { techniqueName: 'Butterfly Guard Sweep', urls: [] },
+      { techniqueName: 'Butterfly Guard Arm-Drag to Back', urls: [] },
+    ]
+  },
+  {
+    positionName: 'Guard Passing',
+    techniques: [
+      { techniqueName: 'Opening Closed Guard', urls: [] },
+      { techniqueName: 'Double Under Pass', urls: [] },
+      { techniqueName: 'Knee Cutter Pass', urls: [] },
+      { techniqueName: 'Switch Base Pass', urls: [] },
+      { techniqueName: 'Over Under Pass', urls: [] },
+      { techniqueName: 'Toreando / Bullfighter Pass', urls: [] },
+      { techniqueName: 'Half Guard Tripod Pass', urls: [] },
+      { techniqueName: 'Hal Guard Hip Drop Pass', urls: [] },
+      { techniqueName: 'Open Guard Bullfighter to Knee Cut', urls: [] },
+      { techniqueName: 'Open Guard Bullfighter to Back Step', urls: [] },
+      { techniqueName: 'Open Guard Shoulder to Belt Pass', urls: [] },
+    ]
+  },
+  {
+    positionName: 'Half Guard',
+    techniques: [
+      { techniqueName: 'Underhook to Back Take', urls: [] },
+      { techniqueName: 'Old School Sweep', urls: [] },
+      { techniqueName: 'Escape to Front Headlock', urls: [] },
+      { techniqueName: 'Roll Under Sweep', urls: [] },
+      { techniqueName: 'Full Guard Recovery / Triangle', urls: [] },
+      { techniqueName: 'Half Guard Kimura', urls: [] },
+    ]
+  },
 ];
